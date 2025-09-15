@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Visualizer - Learn Data Structures & Algorithms</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>DSA Visualizer</h1>
+                <p>Interactive Learning for Data Structures & Algorithms</p>
+            </div>
+            <div class="language-selector">
+                <button id="java-btn" class="lang-btn active">Java</button>
+                <button id="cpp-btn" class="lang-btn">C++</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <aside class="sidebar">
+            <h3>Topics</h3>
+            <div class="topic-section">
+                <h4>Data Structures</h4>
+                <ul class="topic-list">
+                    <li><button class="topic-btn" data-topic="array">Arrays</button></li>
+                    <li><button class="topic-btn" data-topic="linkedlist">Linked List</button></li>
+                    <li><button class="topic-btn" data-topic="stack">Stack</button></li>
+                    <li><button class="topic-btn" data-topic="queue">Queue</button></li>
+                    <li><button class="topic-btn" data-topic="tree">Binary Tree</button></li>
+                    <li><button class="topic-btn" data-topic="graph">Graph</button></li>
+                </ul>
+            </div>
+            <div class="topic-section">
+                <h4>Algorithms</h4>
+                <ul class="topic-list">
+                    <li><button class="topic-btn" data-topic="bubblesort">Bubble Sort</button></li>
+                    <li><button class="topic-btn" data-topic="quicksort">Quick Sort</button></li>
+                    <li><button class="topic-btn" data-topic="mergesort">Merge Sort</button></li>
+                    <li><button class="topic-btn" data-topic="bfs">BFS</button></li>
+                    <li><button class="topic-btn" data-topic="dfs">DFS</button></li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="main-content">
+            <div class="visualization-area">
+                <h2 id="current-topic">Welcome to DSA Visualizer</h2>
+                <div class="controls">
+                    <button id="play-btn" class="control-btn">▶ Play</button>
+                    <button id="pause-btn" class="control-btn">⏸ Pause</button>
+                    <button id="reset-btn" class="control-btn">🔄 Reset</button>
+                    <button id="step-btn" class="control-btn">⏭ Step</button>
+                    <div class="speed-control">
+                        <label for="speed-slider">Speed:</label>
+                        <input type="range" id="speed-slider" min="1" max="10" value="5">
+                    </div>
+                </div>
+                <canvas id="visualization-canvas" width="800" height="400"></canvas>
+                <div id="explanation-text" class="explanation">
+                    Select a topic from the sidebar to begin exploring data structures and algorithms!
+                </div>
+            </div>
+
+            <div class="code-section">
+                <div class="code-header">
+                    <h3>Implementation</h3>
+                    <div class="code-controls">
+                        <button id="copy-code-btn" class="code-btn">📋 Copy</button>
+                    </div>
+                </div>
+                <div class="code-container">
+                    <pre><code id="code-display">// Select a topic to view implementation
+// Available in Java and C++</code></pre>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="visualizer.js"></script>
+</body>
+</html>
